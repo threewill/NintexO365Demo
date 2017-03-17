@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.11.1701.1, Culture=neutral, PublicKeyToken=3751622786b357c2" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-95F302A1C8564385898B9B6407292650">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-95F302A1C8564385898B9B6407292650" Version="1" BaseSiteTemplate="STS#0" DisplayName="Nintex O365 Demo Tenant Template">
+      <pnp:WebSettings RequestAccessEmail="someone@example.com" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="10" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:SupportedUILanguages>
+        <pnp:SupportedUILanguage LCID="1033" />
+      </pnp:SupportedUILanguages>            
+      <pnp:Navigation>
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="false">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+          </pnp:StructuralNavigation>
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="Accounts" Url="{site}/Lists/Accounts/AllItems.aspx" />
+            <pnp:NavigationNode Title="PDF Templates" Url="{site}/PDF Templates/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Generated PDFs" Url="{site}/Generated PDFs/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Nintex Requests" Url="{site}/Lists/Nintex Requests/AllItems.aspx" />
+            <pnp:NavigationNode Title="Signed Documents" Url="{site}/Signed Documents/Forms/AllItems.aspx" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>            
+      <pnp:Lists>
+        <pnp:ListInstance Title="Accounts" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Accounts" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0106" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{A7F6D994-7044-481F-870F-8B2DDB22A980}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/NintexDemo/Lists/Accounts/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Company" />
+                <FieldRef Name="FullName" />
+                <FieldRef Name="EMail" />
+                <FieldRef Name="WorkPhone" />
+                <FieldRef Name="WorkAddress" />
+                <FieldRef Name="WorkCity" />
+                <FieldRef Name="WorkState" />
+                <FieldRef Name="WorkZip" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="475c2610-c157-4b91-9e2d-6855031b3538" Name="FullName" DisplayName="Full Name" />
+            <pnp:FieldRef ID="fce16b4c-fe53-4793-aaab-b4892e736d15" Name="EMail" DisplayName="E-Mail" />
+            <pnp:FieldRef ID="038d1503-4629-40f6-adaf-b47d1ab2d4fe" Name="Company" DisplayName="Company" />
+            <pnp:FieldRef ID="fd630629-c165-4513-b43c-fdb16b86a14d" Name="WorkPhone" DisplayName="Business Phone" />
+            <pnp:FieldRef ID="fc2e188e-ba91-48c9-9dd3-16431afddd50" Name="WorkAddress" DisplayName="Address" />
+            <pnp:FieldRef ID="6ca7bd7f-b490-402e-af1b-2813cf087b1e" Name="WorkCity" DisplayName="City" />
+            <pnp:FieldRef ID="ceac61d3-dda9-468b-b276-f4a6bb93f14f" Name="WorkState" DisplayName="State/Province" />
+            <pnp:FieldRef ID="9a631556-3dac-49db-8d2f-fb033b0fdc24" Name="WorkZip" DisplayName="ZIP/Postal Code" />
+          </pnp:FieldRefs>
+          <pnp:DataRows>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Charles L. Muldowney</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">CharlesLMuldowney@acmecorp.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Acme Corporation</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">248-991-7290</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">3753 Summit Park Avenue</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Detroit</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">MI</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">48226</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Lisa A. Maser</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">lmaser@globex.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Globex Corporation</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">801-465-3339</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">3954 White River Way</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Payson</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">UT</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">84651</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Stephine J. Rimmer</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">srimmer@soylent.net</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Soylent Corp</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">609-241-2492</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">1295 Dark Hollow Road</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Pleasantville</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">NJ</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">08232</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Todd E. Wu</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">ToddEWu@initech.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Initech</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">217-454-3663</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">1991 Isaacs Creek Road</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Decatur</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">IL</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">62522</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Jay D. Rosalez</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">jrosalez@uc.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Umbrella Corporation</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">303-632-4828</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">4664 Horner Street</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Pattersonville</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">OH</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">44657</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Ellen M. Newman</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">EllenMNewman@hooli.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Hooli</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">206-296-6042</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">1033 Owagner Lane</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Seattle</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">WA</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">98101</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="FullName">Linda R. Anderson</pnp:DataValue>
+              <pnp:DataValue FieldName="EMail">LindaRAnderson@massdyn.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Company">Massive Dynamic</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkPhone">510-238-8519</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkAddress">1041 Wayside Lane</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkCity">Oakland</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkState">CA</pnp:DataValue>
+              <pnp:DataValue FieldName="WorkZip">94612</pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Generated PDFs" Description="" DocumentTemplate="{site}/Generated PDFs/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="Generated PDFs" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{5408E51A-E19C-424F-A2B8-9800B474999F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="/sites/NintexDemo/Generated PDFs/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b" Name="CheckoutUser" DisplayName="Checked Out To" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>        
+        <pnp:ListInstance Title="Nintex Requests" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Nintex Requests" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{BC4B4173-A1F8-41AC-9B2D-0115E1B1EB7D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/NintexDemo/Lists/Nintex Requests/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Request_x0020_ID" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Work_x0020_Type" />
+                <FieldRef Name="Client_x0020_Name" />
+                <FieldRef Name="Client_x0020_Address" />
+                <FieldRef Name="City" />
+                <FieldRef Name="State" />
+                <FieldRef Name="ZIP_x0020_Code" />
+                <FieldRef Name="Start_x0020_Date" />
+                <FieldRef Name="End_x0020_Date" />
+                <FieldRef Name="Client_x0020_Signee_x0020_Name" />
+                <FieldRef Name="Nintex_x0020_Request_x0020_Appro" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="Work Type_0" StaticName="f5b3acad1e5747e3a2e817cf743d3f7f" Name="f5b3acad1e5747e3a2e817cf743d3f7f" ID="{b4099648-ca25-419a-b501-b059a52cdd7a}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ColName="ntext5" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="Client Name" DisplayName="Client Name" Required="FALSE" ID="{e43e4581-8570-429f-9dab-1fcaff2c3c10}" SourceID="{{listid:Nintex Requests}}" StaticName="Client_x0020_Name" Name="Client_x0020_Name" ColName="nvarchar3" RowOrdinal="0" Version="1" />
+            <Field Type="Note" Title="Client Address" DisplayName="Client Address" Required="FALSE" ID="{c9ef48d8-e1c5-4264-91c8-e55d10009d0c}" SourceID="{{listid:Nintex Requests}}" StaticName="Client_x0020_Address" Name="Client_x0020_Address" ColName="ntext2" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="City" DisplayName="City" Required="FALSE" ID="{ec2457b0-7ca6-4221-95af-3169e5d5b7ef}" SourceID="{{listid:Nintex Requests}}" StaticName="City" Name="City" ColName="nvarchar4" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="State" DisplayName="State" Required="FALSE" ID="{d2c05f20-da2b-4bd5-a427-70f9dfe55b52}" SourceID="{{listid:Nintex Requests}}" StaticName="State" Name="State" ColName="nvarchar5" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="ZIP Code" DisplayName="ZIP Code" Required="FALSE" ID="{4bb394df-d2d4-4f4a-878c-a6711e89ee57}" SourceID="{{listid:Nintex Requests}}" StaticName="ZIP_x0020_Code" Name="ZIP_x0020_Code" ColName="nvarchar6" RowOrdinal="0" Version="1" />
+            <Field Type="DateTime" Title="Start Date" DisplayName="Start Date" Required="FALSE" Format="DateOnly" ID="{144bd0de-9282-414a-a438-d4d40220f442}" SourceID="{{listid:Nintex Requests}}" StaticName="Start_x0020_Date" Name="Start_x0020_Date" ColName="datetime1" RowOrdinal="0" Version="1" />
+            <Field Type="DateTime" Title="End Date" DisplayName="End Date" Required="FALSE" Format="DateOnly" ID="{4fddf3f1-b180-45c7-b054-40bb3e813023}" SourceID="{{listid:Nintex Requests}}" StaticName="End_x0020_Date" Name="End_x0020_Date" ColName="datetime2" RowOrdinal="0" Version="1" />
+            <Field Type="Note" Title="Description" DisplayName="Description" Required="FALSE" ID="{b9272541-134a-49d2-a32b-a00c35f5075c}" SourceID="{{listid:Nintex Requests}}" StaticName="Description" Name="Description" ColName="ntext3" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="Client Signee Name" DisplayName="Client Signee Name" Required="FALSE" ID="{bbccd027-534d-477a-a0c9-f71d6da0656f}" SourceID="{{listid:Nintex Requests}}" StaticName="Client_x0020_Signee_x0020_Name" Name="Client_x0020_Signee_x0020_Name" ColName="nvarchar7" RowOrdinal="0" Version="1" />
+            <Field Type="Text" Title="Request ID" DisplayName="Request ID" Required="FALSE" ID="{b12f62fb-b120-4910-b2f6-d5fb0316d143}" SourceID="{{listid:Nintex Requests}}" StaticName="Request_x0020_ID" Name="Request_x0020_ID" ColName="nvarchar8" RowOrdinal="0" Version="1" />
+            <Field DisplayName="Nintex Request Approval" Type="URL" Required="FALSE" ID="{c3bf9d85-8eae-4472-9145-a11ffe73eb28}" SourceID="{{listid:Nintex Requests}}" StaticName="Nintex_x0020_Request_x0020_Appro" Name="Nintex_x0020_Request_x0020_Appro" ColName="nvarchar9" RowOrdinal="0" ColName2="nvarchar10" RowOrdinal2="0" Version="2" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+            <Field Type="TaxonomyFieldType" DisplayName="Work Type" List="{listid:TaxonomyHiddenList}" WebId="8ce2c984-bd83-48aa-8b14-897469fcbee8" ShowField="Term1033" Required="TRUE" EnforceUniqueValues="FALSE" ID="{f5b3acad-1e57-47e3-a2e8-17cf743d3f7f}" SourceID="{b3238ee5-6b22-4505-ad4f-6a00eebdd636}" StaticName="Work_x0020_Type" Name="Work_x0020_Type" ColName="int1" RowOrdinal="0" Version="1">
+              <Default />
+              <Customization>
+                <ArrayOfProperty>
+                  <Property>
+                    <Name>SspId</Name>
+                    <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">aeee5ebf-a89b-4cf4-8769-9281106a978e</Value>
+                  </Property>
+                  <Property>
+                    <Name>GroupId</Name>
+                  </Property>
+                  <Property>
+                    <Name>TermSetId</Name>
+                    <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">164dc673-6001-4cf0-a320-e45dc38f86e8</Value>
+                  </Property>
+                  <Property>
+                    <Name>AnchorId</Name>
+                    <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+                  </Property>
+                  <Property>
+                    <Name>UserCreated</Name>
+                    <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>Open</Name>
+                    <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TextField</Name>
+                    <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{b4099648-ca25-419a-b501-b059a52cdd7a}</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsPathRendered</Name>
+                    <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsKeyword</Name>
+                    <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TargetTemplate</Name>
+                  </Property>
+                  <Property>
+                    <Name>CreateValuesInEditForm</Name>
+                    <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterAssemblyStrongName</Name>
+                    <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterClassName</Name>
+                    <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterMethodName</Name>
+                    <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterJavascriptProperty</Name>
+                    <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+                  </Property>
+                </ArrayOfProperty>
+              </Customization>
+            </Field>
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="PDF Templates" Description="" DocumentTemplate="{site}/PDF Templates/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="PDF Templates" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{6F5B763F-1ABA-4A97-B695-CAD2AA542DF6}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="/sites/NintexDemo/PDF Templates/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b" Name="CheckoutUser" DisplayName="Checked Out To" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Signed Documents" Description="" DocumentTemplate="{site}/Signed Documents/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="Signed Documents" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{3E547FBD-B79C-417D-BF7D-4EE3094FB68F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="/sites/NintexDemo/Signed Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Work_x0020_Type" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="Work Type_0" StaticName="d9d213e32bdd4ba1823a6afc7c1e84a1" Name="d9d213e32bdd4ba1823a6afc7c1e84a1" ID="{e3a85857-f608-49ca-87ca-4901a220f705}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ColName="ntext2" RowOrdinal="0" Version="1" />
+            <Field Type="TaxonomyFieldType" DisplayName="Work Type" List="{listid:TaxonomyHiddenList}" WebId="8ce2c984-bd83-48aa-8b14-897469fcbee8" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" ID="{d9d213e3-2bdd-4ba1-823a-6afc7c1e84a1}" SourceID="{746d1ea3-94e5-4943-a5ed-ff617db6ca24}" StaticName="Work_x0020_Type" Name="Work_x0020_Type" ColName="int1" RowOrdinal="0" Version="1">
+              <Default />
+              <Customization>
+                <ArrayOfProperty>
+                  <Property>
+                    <Name>SspId</Name>
+                    <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">aeee5ebf-a89b-4cf4-8769-9281106a978e</Value>
+                  </Property>
+                  <Property>
+                    <Name>GroupId</Name>
+                  </Property>
+                  <Property>
+                    <Name>TermSetId</Name>
+                    <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">164dc673-6001-4cf0-a320-e45dc38f86e8</Value>
+                  </Property>
+                  <Property>
+                    <Name>AnchorId</Name>
+                    <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+                  </Property>
+                  <Property>
+                    <Name>UserCreated</Name>
+                    <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>Open</Name>
+                    <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TextField</Name>
+                    <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{e3a85857-f608-49ca-87ca-4901a220f705}</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsPathRendered</Name>
+                    <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsKeyword</Name>
+                    <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TargetTemplate</Name>
+                  </Property>
+                  <Property>
+                    <Name>CreateValuesInEditForm</Name>
+                    <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterAssemblyStrongName</Name>
+                    <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterClassName</Name>
+                    <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterMethodName</Name>
+                    <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterJavascriptProperty</Name>
+                    <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+                  </Property>
+                </ArrayOfProperty>
+              </Customization>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b" Name="CheckoutUser" DisplayName="Checked Out To" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+          <pnp:Folders>            
+            <pnp:Folder Name="Acme Corporation" />
+            <pnp:Folder Name="Globex Corporation" />
+            <pnp:Folder Name="Soylent Corp" />
+            <pnp:Folder Name="Initech" />
+            <pnp:Folder Name="Umbrella Corporation" />
+            <pnp:Folder Name="Hooli" />
+            <pnp:Folder Name="Massive Dynamic" />
+          </pnp:Folders>
+        </pnp:ListInstance>        
+      </pnp:Lists>            
+      <pnp:TermGroups>        
+        <pnp:TermGroup Name="Custom" ID="6db27211-e589-47ce-a205-c3fbc89dbc35" Description="">
+          <pnp:TermSets>
+            <pnp:TermSet Name="Work Type" ID="164dc673-6001-4cf0-a320-e45dc38f86e8" Description="">
+              <pnp:Terms>
+                <pnp:Term Name="App Dev" ID="89902475-4daf-4d48-9681-c9f4c6e194b3" SourceTermId="89902475-4daf-4d48-9681-c9f4c6e194b3" />
+                <pnp:Term Name="Migration" ID="d438f2d4-823a-4d4e-a6f1-76699d20e536" SourceTermId="d438f2d4-823a-4d4e-a6f1-76699d20e536" />
+                <pnp:Term Name="Portals" ID="af584080-23c6-46a9-918e-feeb02e7c91a" SourceTermId="af584080-23c6-46a9-918e-feeb02e7c91a" />
+                <pnp:Term Name="Sustainment" ID="0cee4694-d069-415a-bb45-86bd5f22ec80" SourceTermId="0cee4694-d069-415a-bb45-86bd5f22ec80" />
+                <pnp:Term Name="Training" ID="e6f914b1-faeb-4bc4-b08e-ec84d75dcf20" SourceTermId="e6f914b1-faeb-4bc4-b08e-ec84d75dcf20" />
+              </pnp:Terms>
+            </pnp:TermSet>
+          </pnp:TermSets>
+          <pnp:Contributors />
+          <pnp:Managers />
+        </pnp:TermGroup>        
+      </pnp:TermGroups>
+      <pnp:Files>
+        <pnp:File Src=".\Nintex Files\NintexDemoTemplate.docx" Folder="PDF Templates" Overwrite="true" />
+      </pnp:Files>      
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

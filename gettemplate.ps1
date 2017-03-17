@@ -1,0 +1,2 @@
+Connect-PnPOnline -Url "https://itrm351667.sharepoint.com/sites/NintexDemo" -UseWebLogin
+Get-PnPProvisioningTemplate -Out "SampleProvisioningTemplateV3.xml" -Schema V201605  -IncludeAllTermGroups -TemplateDisplayName "Nintex O365 Demo Tenant Template"
