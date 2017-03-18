@@ -89,4 +89,4 @@ Currently, this project uses the '2016-05' version of the [PnP Provisioning-Sche
 [Click Here to view a sample](https://github.com/SharePoint/PnP-Provisioning-Schema/blob/master/Samples/ProvisioningSchema-2016-05-FullSample-02.xml) 
 
 [msgraph-login]: https://github.com/threewill/NintexO365Demo/blob/master/images/pnp-msgraph-login.jpg "Microsoft Graph Login Window"
-[nintex-apps]: https://github.com/threewill/Nintex0365Demo/blob/master/images/nintex-apps.jpg "Nintex for Office 365 Apps"
+[nintex-apps]: https://github.com/threewill/NintexO365Demo/blob/master/images/nintex-apps.jpg "Nintex for Office 365 Apps"
